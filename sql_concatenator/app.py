@@ -8,15 +8,11 @@ import random
 NORM_FONT = ("Verdana", 10)
 HEADER_FONT = ("Verdana", 12, "bold")
 BOLD_FONT = ("Verdana", 10, "bold")
-STRIKE_FONT = ("Verdana", 10, "overstrike")
-
-
-# ************** Main App *************
 
 class App(tk.Tk):
     def __init__(self, *args, **kwargs):
         tk.Tk.__init__(self, *args, **kwargs)
-        self.wm_title("SQL Query Concatenator 2022.0")
+        self.wm_title("SQL Concatenator 2022.0")
 
         MainFrame(self).grid()
         
@@ -46,27 +42,17 @@ class MainFrame(tk.Frame):
         clipbtn = tk.Button(self, text="Copy to Clipboard!", width=25, command=self.clip_button_pressed)
 
         # *********** Now, grid the stuff. ********
-
-        # Labels
         input_label.grid(row=0, column=0, columnspan=2)
         output_label.grid(row=0, column=2, columnspan=2)
         delimiter_label.grid(row=1, column=4, sticky='w', columnspan=2)
-        self.copy_label.grid(row=6, column=4, columnspan=2)
-
-        # Entries
-        self.custom_check_entry.grid(row=3, column=5, sticky='w')
-
-        # Text Entries
         self.input_entry.grid(row=1, column=0, columnspan=2, rowspan=12, padx=3, pady=3)
         self.output_entry.grid(row=1, column=2, columnspan=2, rowspan=12)
-
-        # Checkboxes
         self.line_check.grid(row=2, column=4, sticky='w')
         self.custom_check.grid(row=3, column=4, sticky='w')
-
-        # Buttons
+        self.custom_check_entry.grid(row=3, column=5, sticky='w')
         concatbtn.grid(row=4, column=4, columnspan=2, padx=5)
         clipbtn.grid(row=5, column=4, columnspan=2, padx=5)
+        self.copy_label.grid(row=6, column=4, columnspan=2)
 
         self.input_entry.focus()
 
@@ -132,5 +118,6 @@ class Concatenator:
             "◔_◔",
             "(ノ=Д=)ノ┻━┻",
             "ಠ╭╮ಠ",
-            "(ノಠ益ಠ)ノ彡┻━┻"]
+            "(ノಠ益ಠ)ノ彡┻━┻"
+        ]
         return happy_faces[random.randint(0, len(happy_faces) - 1)]
