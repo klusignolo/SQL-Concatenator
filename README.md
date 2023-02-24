@@ -1,5 +1,4 @@
-# SQL-Concatenator
-#  ![](https://i.ibb.co/pRT6B9x/face.png)
+# SQL-Concatenator <img src="https://i.ibb.co/pRT6B9x/face.png" alt="" width="40"/>
 A simple Python utility for concatenating some delimited input string into a format for a SQL IN statement.
 
 ![SQL Concatenator Demo](https://i.ibb.co/pXkrxHp/Concatenator.gif)
