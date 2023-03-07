@@ -32,6 +32,12 @@ pyinstaller build.spec
 ```
 When PyInstaller finishes running, the new .exe file will be located in /dist. You may need to run 'pip install pyinstaller' if you don't already have it.
 
+## Usage
+Using the SQL-Concatenator is pretty simple.
+- Paste the un-concatenated input into the *Input* section
+- Verify that the delimiter is properly set (Note that *Line* and *Custom* can both be selected. For custom-only delimiter, ensure that *Line* is unchecked).
+- Click **Concatenate** to write to the *Output* section. **Copy to Clipboard** will do the thing that the button says.
+
 ## Tests
 
 There are a few unit tests for various input configurations. To run tests:
